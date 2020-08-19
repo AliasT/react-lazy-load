@@ -1,10 +1,11 @@
+// @ts-nocheck
 const style = (element, prop) =>
-  typeof getComputedStyle !== 'undefined'
+  typeof getComputedStyle !== "undefined"
     ? getComputedStyle(element, null).getPropertyValue(prop)
     : element.style[prop];
 
 const overflow = (element) =>
-  style(element, 'overflow') + style(element, 'overflow-y') + style(element, 'overflow-x');
+  style(element, "overflow") + style(element, "overflow-y") + style(element, "overflow-x");
 
 const scrollParent = (element) => {
   if (!(element instanceof HTMLElement)) {
